@@ -1,4 +1,8 @@
-
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package dbHelpers;
 
 import java.io.IOException;
@@ -13,55 +17,61 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import model.Customers;
 
-public class ReadQuery {
-    
+/**
+ *
+ * @author Shuo
+ */
+public class SearchQuery {
     private Connection conn;
     private ResultSet results;
     
-    public ReadQuery(){
-     Properties props = new Properties();//MWC
-     InputStream instr = getClass().getResourceAsStream("dbConn.properties");
+    public SearchQuery(){
+    Properties props = new Properties();//MWC
+    InputStream instr = getClass().getResourceAsStream("dbConn.properties");
         try {
             props.load(instr);
         } catch (IOException ex) {
-            Logger.getLogger(ReadQuery.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(SearchQuery.class.getName()).log(Level.SEVERE, null, ex);
         }
         try {
             instr.close();
         } catch (IOException ex) {
-            Logger.getLogger(ReadQuery.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(SearchQuery.class.getName()).log(Level.SEVERE, null, ex);
         }
-     
-     String driver = props.getProperty("driver.name");
-     String url = props.getProperty("server.name");
-     String username = props.getProperty("user.name");
-     String passwd = props.getProperty("user.password");
+    
+    String driver = props.getProperty("driver.name");
+    String url = props.getProperty("server.name");
+    String username = props.getProperty("user.name");
+    String passwd = props.getProperty("user.password");
         try {
             Class.forName(driver);
         } catch (ClassNotFoundException ex) {
-            Logger.getLogger(ReadQuery.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(SearchQuery.class.getName()).log(Level.SEVERE, null, ex);
         }
         try {
             conn = DriverManager.getConnection(url, username, passwd);
         } catch (SQLException ex) {
-            Logger.getLogger(ReadQuery.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
+            Logger.getLogger(SearchQuery.class.getName()).log(Level.SEVERE, null, ex);
+      }
     
-    public void doRead() {
-          
-        try {
-            String query = "Select * from customers ORDER BY custID ASC ";
+        
+    }
+        
+    public void doSearch (String firstname,String lastname){
+    try {
+            String query = "SELECT * FROM customers WHERE UPPER(firstname) LIKE ? or UPPER(lastname) LIKE ? ORDER BY custID ASC";
             
-            PreparedStatement ps = conn.prepareStatement(query);    
-            this.results = ps.executeQuery();
+            PreparedStatement ps = conn. prepareStatement(query);
+            ps.setString(1, "%" + firstname.toUpperCase() + "%");
+            ps.setString(2, "%" + lastname.toUpperCase() + "%");
+            this.results = ps. executeQuery();
         } catch (SQLException ex) {
-            Logger.getLogger(ReadQuery.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(SearchQuery.class.getName()).log(Level.SEVERE, null, ex);
         }
-            
+    
     }
     
-    public String getHTMLTable(){
+     public String getHTMLTable(){
         
         String table = "";
         
@@ -69,6 +79,7 @@ public class ReadQuery {
          try {
         while(this.results.next()){
             Customers customer = new Customers();
+            
             customer.setCustID(this.results.getInt("custID"));
             customer.setFirstName(this.results.getString("firstName"));
             customer.setLastName(this.results.getString("lastName"));
@@ -128,8 +139,6 @@ public class ReadQuery {
             
             table += "</tr>";
 
-
-
         }
          
          }catch (SQLException ex) {
@@ -149,4 +158,12 @@ public class ReadQuery {
     
     
     
+    
+    
+    
+    
 }
+        
+        
+        
+        

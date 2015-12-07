@@ -13,7 +13,7 @@
     </head>
     <body>
         <h1>Add A New Customer</h1>
-        <form name="addForm" action="addCustomer" method="get">
+        <form name="addForm" action="addCustomer" method="Post">
                     <label> First Name:</label>
                     <br>
                     <input type="text" name="fname" value="" />
