@@ -11,10 +11,14 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Update Form</title>
+        <link rel="stylesheet" type="text/css" href="./format.css">
     </head>
     <body>
-        <h1>Update Customers</h1>
+        <div class="wrap"> <!--div to hold all other divs-->
+           <%@ include file="includes/header.jsp"%>
+           <%@ include file="includes/menu.jsp"%>
+       <div class="main"> <!--main divs-->
         
         <form name="updateForm" action="updateCustomer" method="Post">
                     <label> Customer ID:</label>
@@ -75,5 +79,8 @@
             
             
         </form>
+        </div>
+        <%@ include file="includes/footer.jsp"%>
+        </div>
     </body>
 </html>
