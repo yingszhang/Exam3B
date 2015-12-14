@@ -3,7 +3,21 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Shuo/Documents/NetBeansProjects/CustomersApp/src/java/model/Customers.java</file>
+            <file>file:/C:/Users/Shuo/Documents/NetBeansProjects/CustomersApp/src/java/dbHelpers/UpdateQuery.java</file>
+            <file>file:/C:/Users/Shuo/Documents/NetBeansProjects/CustomersApp/web/add.jsp</file>
+            <file>file:/C:/Users/Shuo/Documents/NetBeansProjects/CustomersApp/src/java/dbHelpers/AddQuery.java</file>
+            <file>file:/C:/Users/Shuo/Documents/NetBeansProjects/CustomersApp/web/updateForm.jsp</file>
+            <file>file:/C:/Users/Shuo/Documents/NetBeansProjects/CustomersApp/web/includes/menu.jsp</file>
+            <file>file:/C:/Users/Shuo/Documents/NetBeansProjects/CustomersApp/src/java/dbHelpers/ReadRecord.java</file>
+            <file>file:/C:/Users/Shuo/Documents/NetBeansProjects/CustomersApp/src/java/controller/AddForm.java</file>
+            <file>file:/C:/Users/Shuo/Documents/NetBeansProjects/CustomersApp/web/format.css</file>
+            <file>file:/C:/Users/Shuo/Documents/NetBeansProjects/CustomersApp/src/java/controller/SearchServlet.java</file>
+            <file>file:/C:/Users/Shuo/Documents/NetBeansProjects/CustomersApp/web/read.jsp</file>
+            <file>file:/C:/Users/Shuo/Documents/NetBeansProjects/CustomersApp/src/java/controller/AddServlet.java</file>
+            <file>file:/C:/Users/Shuo/Documents/NetBeansProjects/CustomersApp/src/java/dbHelpers/SearchQuery.java</file>
+            <file>file:/C:/Users/Shuo/Documents/NetBeansProjects/CustomersApp/src/java/controller/Read.java</file>
+            <file>file:/C:/Users/Shuo/Documents/NetBeansProjects/CustomersApp/src/java/controller/UpdateServlet.java</file>
+            <file>file:/C:/Users/Shuo/Documents/NetBeansProjects/CustomersApp/src/java/controller/UpdateFormServlet.java</file>
             <file>file:/C:/Users/Shuo/Documents/NetBeansProjects/CustomersApp/src/java/dbHelpers/ReadQuery.java</file>
         </group>
     </open-files>

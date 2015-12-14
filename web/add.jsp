@@ -13,21 +13,25 @@
         <link rel="stylesheet" type="text/css" href="./format.css">
     </head>
     <body>
-        <h1>Add A New Customer</h1>
+        <div class="wrap"> <!--div to hold all other divs-->
+           <%@ include file="includes/header.jsp"%>
+           <%@ include file="includes/menu.jsp"%>
+       <div class="main"> <!--main divs-->
+      
         <form name="addForm" action="addCustomer" method="Post">
                     <label> First Name:</label>
                     <br>
-                    <input type="text" name="fname" value="" />
+                    <input type="text" name="fname" value="" placeholder="FirstName" required/>
                     <br>
 
                     <label> Last Name:</label>
                     <br>
-                    <input type="text" name="lname" value="" />
+                    <input type="text" name="lname" value="" placeholder="LastName" required />
                     <br>
                     
                     <label> Address1:</label>
                     <br>
-                    <input type="text" name="add1" value="" />
+                    <input type="text" name="add1" value="" placeholder="*** abc Sreet, Apt***" required />
                     <br>
                     
                     <label> Address2:</label>
@@ -37,11 +41,11 @@
                     
                     <label> City:</label>
                     <br>
-                    <input type="text" name="city" value="" />
+                    <input type="text" name="city" value="" placeholder="City: Iowa City" required/>
                     <br>
                     
                     <label>State:</label><br>
-	        <select name="state">
+	        <select name="state" required>
 		<option value="">Please choose a state...</option>
 			<option value="AL">Alabama</option>
 			<option value="AK">Alaska</option>
@@ -94,29 +98,28 @@
 			<option value="WV">West Virginia</option>
 			<option value="WI">Wisconsin</option>
 			<option value="WY">Wyoming</option>
-                     </select> <br>
+                     </select>  <br>
  
                     <label> Zip:</label>
                     <br>
-                    <input type="text" name="zip" value="" />
+                    <input type="text" name="zip" value="" pattern="[0-9]{5}" name="Zip"
+                           title="Zip: 5 digital number" placeholder="Zip:*****"required/>
                     <br>
                     
                     <label> Email:</label>
                     <br>
-                    <input type="text" name="email" value="" />
+                    <input type="text" name="email" value="" placeholder="john@example.net"required/>
                     <br>
                     
                     <label> Age:</label>
                     <br>
-                    <input type="text" name="age" value="" />
+                    <input type="text" name="age" value="" placeholder="Age:1-110" required />
                     <br>
                     <br><br>
                     <input type="reset" value="Clear" id="clear">
-                    <input type="submit" name="submit" value="submit" />
-            
-            
-            
-            
+                    <input type="submit" name="submit" value="Submit" />
         </form>
+        </div>
+        
     </body>
 </html>

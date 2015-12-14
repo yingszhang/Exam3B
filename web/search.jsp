@@ -21,7 +21,7 @@
             <input type="text" name="searchVal" value="" /><br><br>
             <input type="submit" name="submit" value="Search"/>
             <br>
-        <a href ="index.jsp" > Back </a>
+        
         </form>
        </div>
        <%@ include file="includes/footer.jsp"%>

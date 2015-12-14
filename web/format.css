@@ -1,18 +1,20 @@
-body{
+html,body{
       background-color:#D2B48C;
       margin: 8px;
       border-color: white;
+      height: 90%;
+          
 }
 
 table{
     background-color:white;
-    width: 700px;
     padding: 5px;
 }
 
 th{
     background-color: #FFFF99;
-    color:#696969;
+    color:black;
+
    
 }
 
@@ -21,12 +23,10 @@ td{
     color:#FFFFFF;
    
 }
-table, td, th {
-    border: 1px solid white;
-}
+
 
 form{
-    height:150px;
+    height:550px;
     width: 300px;
     padding:15px;
     
@@ -35,25 +35,25 @@ form{
 
 label{
    
-    color:#696969;
+    color:black;
     width:100px;   
 }
 
-a {color: #696969;
+a {color: black;
 }
 
 
 h1{
     color:black;
 }
-form {height:1px;}
+
 
 
 
 input[readonly] {background-color: gray;}
 
 /* Wrapper div that holds all of the content divs for the page */
-.wrap {text-align:center; width:90%; margin:0 auto; border: 3px solid black; margin-top:25px;}
+.wrap {text-align:center; margin:0 auto; border: 3px solid black; margin-top:25px;}
 
 /* format the page header */
 .header{text-align:left; padding:25px;}
@@ -68,8 +68,8 @@ input[readonly] {background-color: gray;}
 /*Fat Erik's Pipelist*/
  /*http://css.maxdesign.com.au/listamatic/horizontal32.htm*/
  
- .wholemenu {display:inline-block; height:5px;}
- .search { float:right;}
+ .wholemenu {display:inline-block; height:30px; }
+ .search { float:right; }
  .navcontainer { margin-left: 30px; text-align:left;}
  .navlist
  {

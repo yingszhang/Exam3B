@@ -76,6 +76,52 @@ public class SearchQuery {
         String table = "";
         
         table += "<table>";
+          table += "<tr>";
+                table += "<th>";
+                table += "Customer ID";
+                table += "</th>";
+                
+                table += "<th>";
+                table += "First Name";
+                table += "</th>";
+           
+                table += "<th>";
+                table += "Last Name";
+                table += "</th>";
+                
+                table += "<th>";
+                table += "Address 1";
+                table += "</th>";
+                
+                table += "<th>";
+                table += "Address 2";
+                table += "</th>";
+                
+                table += "<th>";
+                table += "City";
+                table += "</th>";
+                
+                table += "<th>";
+                table += "State";
+                table += "</th>";
+                
+                table += "<th>";
+                table += "Zip";
+                table += "</th>";
+                
+                table += "<th>";
+                table += "Email Address";
+                table += "</th>";
+                
+                table += "<th>";
+                table += "Age";
+                table += "</th>";
+                
+                table += "<th>";
+                table += "";
+                table += "</th>";
+                
+        table += "</tr>";
          try {
         while(this.results.next()){
             Customers customer = new Customers();
@@ -91,8 +137,9 @@ public class SearchQuery {
             customer.setEmailAddr(this.results.getString("emailaddr"));
             customer.setAge(this.results.getInt("age"));
             
-            
+           
             table += "<tr>";
+            
             table += "<td>";
                 table += customer.getCustID(); 
                 table += "</td>";

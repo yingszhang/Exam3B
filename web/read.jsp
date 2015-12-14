@@ -23,9 +23,7 @@
         <%= table %>
         
         <br><br>
-        <a href = "add"> Add A New Customer </a>
-        <br>
-        <a href ="index.jsp" > Back </a>
+        
        </div>
         <%@ include file="includes/footer.jsp"%>
         </div>
